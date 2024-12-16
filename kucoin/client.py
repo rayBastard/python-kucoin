@@ -6309,7 +6309,42 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            {
+                'id': '6760aaecaef36e0007b895c8',
+                'symbol': 'ETH-USDT',
+                'opType': 'DEAL',
+                'type': 'limit',
+                'side': 'buy',
+                'price': '0.01',
+                'size': '3000',
+                'funds': '30',
+                'dealSize': '0',
+                'dealFunds': '0',
+                'fee': '0',
+                'feeCurrency': 'USDT',
+                'stp': None,
+                'timeInForce': 'GTC',
+                'postOnly': False,
+                'hidden': False,
+                'iceberg': False,
+                'visibleSize': '0',
+                'cancelAfter': 0,
+                'channel': 'API',
+                'clientOid': 'adsfadf31341',
+                'remark': None, 'tags':
+                'partner:python-kucoinspot',
+                'cancelExist': True,
+                'createdAt': 1734388460821,
+                'lastUpdatedAt': 1734388534742,
+                'tradeType': 'TRADE',
+                'inOrderBook': False,
+                'cancelledSize': '3000',
+                'cancelledFunds': '30',
+                'remainSize': '0',
+                'remainFunds': '0',
+                'tax': '0',
+                'active': False
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -6384,7 +6419,7 @@ class Client(BaseClient):
 
         """
 
-        return self._get("hf/orders/dead-cancel-all", True, data=params)
+        return self._get("hf/orders/dead-cancel-all/query", True, data=params)
 
     # Stop Orders
 
@@ -6661,7 +6696,50 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            {
+                'currentPage': 1,
+                'pageSize': 50,
+                'totalNum': 1,
+                'totalPage': 1,
+                'items': [
+                    {
+                        'id': 'vs8t6pr0lso3c9t2003lnkha',
+                        'symbol': 'ETH-USDT',
+                        'userId': '64f99aced178640001306e6e',
+                        'status': 'NEW',
+                        'type': 'limit',
+                        'side': 'buy',
+                        'price': '2000.00000000000000000000',
+                        'size': '20.00000000000000000000',
+                        'funds': None,
+                        'stp': None,
+                        'timeInForce': 'GTC',
+                        'cancelAfter': -1,
+                        'postOnly': False,
+                        'hidden': False,
+                        'iceberg': False,
+                        'visibleSize': None,
+                        'channel': 'API',
+                        'clientOid': '10f80634d976445e9154285b5fc2313a',
+                        'remark': None,
+                        'tags': 'partner:python-kucoinspot',
+                        'relatedNo': None,
+                        'orderTime': 1734389552383000029,
+                        'domainId': 'kucoin', 'tradeSource':
+                        'USER', 'tradeType': 'TRADE',
+                        'feeCurrency': 'USDT',
+                        'takerFeeRate': '0.00100000000000000000',
+                        'makerFeeRate': '0.00100000000000000000',
+                        'createdAt': 1734389552383,
+                        'stop': 'loss',
+                        'stopTriggerTime': None,
+                        'stopPrice': '2100.00000000000000000000',
+                        'limitPrice': None,
+                        'pop': None,
+                        'activateCondition': None
+                    }
+                ]
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
