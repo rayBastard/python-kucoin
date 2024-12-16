@@ -5808,7 +5808,9 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            {
+                'orderId': '6760a9803ecf4300076b3fc4'
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -5843,7 +5845,14 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            {
+                'orderId': '6760a9c43ecf4300076ca15d',
+                'originSize': '3000',
+                'dealSize': '0',
+                'remainSize': '0',
+                'canceledSize': '3000',
+                'status': 'done'
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -5875,7 +5884,7 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            todo add the response example, cancel failed
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -5979,7 +5988,7 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            success
 
         :raises: KucoinResponseException, KucoinAPIException
 
