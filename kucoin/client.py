@@ -5195,7 +5195,7 @@ class Client(BaseClient):
 
         .. code:: python
 
-            order = client.hf_create_market_order('ETH-USDT', 'buy', size=20)
+            order = client.hf_create_market_order('ETH-USDT', Client.SIDE_BUY, size=20)
 
         :returns: ApiResponse
 
@@ -5290,6 +5290,10 @@ class Client(BaseClient):
         :returns: ApiResponse
 
         .. code:: python
+
+            {
+                'orderId': '67600fe83bb37e0007de0f34'
+            }
 
             {
                 "code": "200000",
@@ -5586,7 +5590,16 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            [
+                {
+                    'orderId': '6760128a7cf7ff00071eae8d',
+                    'success': True
+                },
+                {
+                    'orderId': '6760128a9574f300078a8f46',
+                    'success': True
+                }
+            ]
 
         :raises: KucoinResponseException, KucoinAPIException, KucoinRequestException, LimitOrderException
 
