@@ -5120,6 +5120,10 @@ class Client(BaseClient):
         .. code:: python
 
             {
+                'orderId': '67600a7b716ab30007374962'
+            }
+
+            {
                 "code": "200000",
                 "data": {
                     "orderId": "672a249054d62a0007ae04b8",
@@ -5191,12 +5195,14 @@ class Client(BaseClient):
 
         .. code:: python
 
-            order = client.hf_create_market_order('ETH-USDT', Client.SIDE_BUY, size=20)
+            order = client.hf_create_market_order('ETH-USDT', 'buy', size=20)
 
         :returns: ApiResponse
 
         .. code:: python
 
+            {
+                'orderId': '67600da71ed0d8000750a36c'
             {
                 "code": "200000",
                 "data": {
