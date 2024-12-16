@@ -2246,7 +2246,6 @@ class Client(BaseClient):
         :raises:  KucoinResponseException, KucoinAPIException
 
         """
-        # todo check and add the response
 
         data = {}
         if page:
@@ -2634,14 +2633,16 @@ class Client(BaseClient):
         .. code-block:: python
 
             {
-                "id": "5bd6e9286d99522a52e458de"
+                'uid': 232103664,
+                'subName': 'raySubAccount',
+                'remarks': None,
+                'access': 'Spot'
             }
 
         :raises:  KucoinResponseException, KucoinAPIException
 
         """
 
-        # todo check and add the response (last time it was 100010: Network error. Please try again later)
         data = {"password": password, "subName": sub_name, "access": access}
         if remarks:
             data["remarks"] = remarks
@@ -2875,11 +2876,11 @@ class Client(BaseClient):
 
         .. code:: python
 
-            history = client.get_futures_account_activity()
+            history = client.futures_get_account_activity()
 
-            history = client.get_account_activity('ETH', start='1540296039000')
+            history = client.futures_get_account_activity('ETH', start='1540296039000')
 
-            history = client.get_account_activity('ETH', forward=TRUE, page_size=10)
+            history = client.futures_get_account_activity('ETH', forward=TRUE, page_size=10)
 
         :returns: API Response
 
