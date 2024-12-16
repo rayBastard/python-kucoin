@@ -6786,7 +6786,43 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            {
+                'id': 'vs8t6pr0lso3c9t2003lnkha',
+                'symbol': 'ETH-USDT',
+                'userId': '64f99aced178640001306e6e',
+                'status': 'NEW',
+                'type': 'limit',
+                'side': 'buy',
+                'price': '2000.00000000000000000000',
+                'size': '20.00000000000000000000',
+                'funds': None,
+                'stp': None,
+                'timeInForce': 'GTC',
+                'cancelAfter': -1,
+                'postOnly': False,
+                'hidden': False,
+                'iceberg': False,
+                'visibleSize': None,
+                'channel': 'API',
+                'clientOid': '10f80634d976445e9154285b5fc2313a',
+                'remark': None,
+                'tags': 'partner:python-kucoinspot',
+                'relatedNo': None,
+                'orderTime': 1734389552383000029,
+                'domainId': 'kucoin',
+                'tradeSource': 'USER',
+                'tradeType': 'TRADE',
+                'feeCurrency': 'USDT',
+                'takerFeeRate': '0.00100000000000000000',
+                'makerFeeRate': '0.00100000000000000000',
+                'createdAt': 1734389552383,
+                'stop': 'loss',
+                'stopTriggerTime': None,
+                'stopPrice': '2100.00000000000000000000',
+                'limitPrice': None,
+                'pop': None,
+                'activateCondition': None
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -6812,7 +6848,45 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            [
+                {
+                    'id': 'vs8t6pr0lso3c9t2003lnkha',
+                    'symbol': 'ETH-USDT',
+                    'userId': '64f99aced178640001306e6e',
+                    'status': 'NEW',
+                    'type': 'limit',
+                    'side': 'buy',
+                    'price': '2000.00000000000000000000',
+                    'size': '20.00000000000000000000',
+                    'funds': None,
+                    'stp': None,
+                    'timeInForce': 'GTC',
+                    'cancelAfter': -1,
+                    'postOnly': False,
+                    'hidden': False,
+                    'iceberg': False,
+                    'visibleSize': None,
+                    'channel': 'API',
+                    'clientOid': '10f80634d976445e9154285b5fc2313a',
+                    'remark': None,
+                    'tags': 'partner:python-kucoinspot',
+                    'relatedNo': None,
+                    'orderTime': 1734389552383000029,
+                    'domainId': 'kucoin',
+                    'tradeSource': 'USER',
+                    'tradeType': 'TRADE',
+                    'feeCurrency': 'USDT',
+                    'takerFeeRate': '0.00100000000000000000',
+                    'makerFeeRate': '0.00100000000000000000',
+                    'createdAt': 1734389552383,
+                    'stop': 'loss',
+                    'stopTriggerTime': None,
+                    'stopPrice': '2100.00000000000000000000',
+                    'limitPrice': None,
+                    'pop': None,
+                    'activateCondition': None
+                }
+            ]
 
         :raises: KucoinResponseException, KucoinAPIException
 
