@@ -2884,10 +2884,17 @@ class Client(BaseClient):
 
         :returns: API Response
 
+        {
+            'dataList': [],
+            'hasMore': False
+        }
+
+        # todo add the whole response when available
+
         :raises:  KucoinResponseException, KucoinAPIException
 
         """
-        # todo check and add the response
+
         data = {}
         if currency:
             data["currency"] = currency
@@ -3321,6 +3328,8 @@ class Client(BaseClient):
                 ]
             }
 
+            # todo unknown error
+
         :raises:  KucoinResponseException, KucoinAPIException
 
         """
@@ -3363,10 +3372,10 @@ class Client(BaseClient):
 
         .. code:: python
 
-            address = client.create_deposit_address_v3('USDT')
-            address = client.create_deposit_address_v3('USDT', 'ERC20')
-            address = client.create_deposit_address_v3('USDT', 'ERC20', '0x0a2586d5a901c8e7e68f6b0dc83bfd8bd8600ff5')
-            address = client.create_deposit_address_v3('USDT', 'ERC20', '0x0a2586d5a901c8e7e68f6b0dc83bfd8bd8600ff5', 100)
+            address = client.create_deposit_address('USDT')
+            address = client.create_deposit_address('USDT', 'ERC20')
+            address = client.create_deposit_address('USDT', 'ERC20', '0x0a2586d5a901c8e7e68f6b0dc83bfd8bd8600ff5')
+            address = client.create_deposit_address('USDT', 'ERC20', '0x0a2586d5a901c8e7e68f6b0dc83bfd8bd8600ff5', 100)
 
         :returns: ApiResponse
 
@@ -4021,12 +4030,11 @@ class Client(BaseClient):
 
         https://www.kucoin.com/docs/rest/funding/trade-fee/trading-pair-actual-fee-spot-margin-trade_hf
 
-        :param symbols: Trading pair (optional, you can inquire fee rates of 10 trading pairs each time at most)
+        :param symbols: Trading pair
         :type symbols: string
 
         .. code:: python
 
-            fee = client.get_trading_pair_fee()
             fee = client.get_trading_pair_fee('BTC-USDT')
 
         :returns: ApiResponse
@@ -5753,7 +5761,10 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            {
+                'newOrderId': '6760a8b4f517900007dfbbde',
+                'clientOid': None
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
