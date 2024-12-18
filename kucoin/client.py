@@ -6938,13 +6938,15 @@ class Client(BaseClient):
 
         .. code:: python
 
-            order = client.oco_create_order('ETH-USDT', Client.SIDE_BUY, size=20, price=2000, stop_price=2100, limit_price=2200)
+            order = client.oco_create_order('ETH-USDT', Client.SIDE_BUY, 20, 2000, 2100, 2200)
 
         :returns: ApiResponse
 
         .. code:: python
 
-            todo add the response example
+            {
+                'orderId': '6762c1e8bc4b57000790a417'
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -6961,8 +6963,7 @@ class Client(BaseClient):
 
         if not client_oid:
             client_oid = flat_uuid()
-        else:
-            data["clientOid"] = client_oid
+        data["clientOid"] = client_oid
 
         if remark:
             data["remark"] = remark
@@ -6985,7 +6986,12 @@ class Client(BaseClient):
 
         :returns: ApiResponse
 
-        todo add the response example
+            {
+                'cancelledOrderIds': [
+                        'vs8t6pr2o7kboiqn003p190o',
+                        'vs8t6pr2o7kboiqn003p190p'
+                    ]
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -7016,7 +7022,12 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            {
+                'cancelledOrderIds': [
+                    'vs8t6pr2oeba2d6m003jmbi4',
+                    'vs8t6pr2oeba2d6m003jmbi5'
+                ]
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
