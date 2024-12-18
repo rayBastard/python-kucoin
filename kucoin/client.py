@@ -7060,7 +7060,12 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            {
+                'cancelledOrderIds': [
+                    'vs8t6pr2oh0roiqn003p1921',
+                    'vs8t6pr2oh0roiqn003p1922'
+                ]
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -7092,7 +7097,13 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            {
+                'orderId': '6762c441bc4b57000790a440',
+                'symbol': 'ETH-USDT',
+                'clientOid': '10482bc28f12465bb0ed6b0d789019ee',
+                'orderTime': 1734526017481,
+                'status': 'CANCELLED'
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -7121,7 +7132,29 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            {
+                'orderId': '6762c441bc4b57000790a440',
+                'symbol': 'ETH-USDT',
+                'clientOid': '10482bc28f12465bb0ed6b0d789019ee',
+                'orderTime': 1734526017481, 'status': 'CANCELLED',
+                'orders': [
+                    {
+                        'id': 'vs8t6pr2oh0roiqn003p1921',
+                        'symbol': 'ETH-USDT',
+                        'side': 'sell',
+                        'price': '4000.00000000000000000000',
+                        'stopPrice': '4000.00000000000000000000',
+                        'size': '0.01000000000000000000',
+                        'status': 'CANCELLED'}, {'id': 'vs8t6pr2oh0roiqn003p1922',
+                        'symbol': 'ETH-USDT',
+                        'side': 'sell',
+                        'price': '2900.00000000000000000000',
+                        'stopPrice': '3000.00000000000000000000',
+                        'size': '0.01000000000000000000',
+                        'status': 'CANCELLED'
+                    }
+                ]
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
