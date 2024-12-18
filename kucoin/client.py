@@ -7183,7 +7183,13 @@ class Client(BaseClient):
 
         .. code:: python
 
-            todo add the response example
+            {
+                'orderId': '6762c396a134d600073b2e43',
+                'symbol': 'ETH-USDT',
+                'clientOid': 'rqeqrqer13234',
+                'orderTime': 1734525846792,
+                'status': 'CANCELLED'
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -7230,7 +7236,28 @@ class Client(BaseClient):
         :returns: ApiResponse
         .. code:: python
 
-            todo add the response example
+            {
+                'currentPage': 1,
+                'pageSize': 50,
+                'totalNum': 2,
+                'totalPage': 1,
+                'items': [
+                    {
+                        'orderId': '6762c441bc4b57000790a440',
+                        'symbol': 'ETH-USDT',
+                        'clientOid': '10482bc28f12465bb0ed6b0d789019ee',
+                        'orderTime': 1734526017481,
+                        'status': 'CANCELLED'
+                    },
+                    {
+                        'orderId': '6762c396a134d600073b2e43',
+                        'symbol': 'ETH-USDT',
+                        'clientOid': 'rqeqrqer13234',
+                        'orderTime': 1734525846792,
+                        'status': 'CANCELLED'
+                    }
+                ]
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
