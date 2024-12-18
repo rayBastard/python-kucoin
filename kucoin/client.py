@@ -11003,7 +11003,52 @@ class Client(BaseClient):
 
         .. code:: python
 
-            # todo: example response
+            {
+                'id': '',
+                'symbol': 'ETHUSDM',
+                'autoDeposit': False,
+                'crossMode': False,
+                'maintMarginReq': 0,
+                'riskLimit': 5,
+                'realLeverage': 0.0,
+                'delevPercentage': 0.0,
+                'openingTimestamp': 0,
+                'currentTimestamp': 1734528178995,
+                'currentQty': 0,
+                'currentCost': 0,
+                'currentComm': 0,
+                'unrealisedCost': 0,
+                'realisedGrossCost': 0.0,
+                'realisedCost': 0.0,
+                'isOpen': False,
+                'markPrice': 0,
+                'markValue': 0.0,
+                'posCost': 0,
+                'posCross': 0,
+                'posCrossMargin': 0,
+                'posInit': 0,
+                'posComm': 0,
+                'posCommCommon': 0,
+                'posLoss': 0,
+                'posMargin': 0,
+                'posFunding': 0,
+                'posMaint': 0,
+                'maintMargin': 0.0,
+                'realisedGrossPnl': 0.0,
+                'realisedPnl': 0.0,
+                'unrealisedPnl': 0.0,
+                'unrealisedPnlPcnt': 0,
+                'unrealisedRoePcnt': 0,
+                'avgEntryPrice': 0,
+                'liquidationPrice': 0,
+                'bankruptPrice': 0,
+                'settleCurrency': 'ETH',
+                'maintainMargin': 0,
+                'riskLimitLevel': 1,
+                'marginMode': 'ISOLATED',
+                'positionSide': 'BOTH',
+                'leverage': 0.0
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -11083,7 +11128,7 @@ class Client(BaseClient):
 
         .. code:: python
 
-            # todo: example response
+            True
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -11114,7 +11159,7 @@ class Client(BaseClient):
 
         .. code:: python
 
-            # todo: example response
+            0
 
         :raises: KucoinResponseException, KucoinAPIException
 
@@ -11207,7 +11252,10 @@ class Client(BaseClient):
 
         .. code:: python
 
-            # todo: example response
+            {
+                'symbol': 'ETHUSDM',
+                'marginMode': 'ISOLATED'
+            }
 
         :raises: KucoinResponseException, KucoinAPIException
 
